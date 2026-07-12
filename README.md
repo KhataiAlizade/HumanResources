@@ -27,11 +27,6 @@ This repository contains a comprehensive, role-based Human Resources Management 
 * **Payroll & Salary Tracking:** Secure backend calculation, assignment, and history logging for employee compensation.
 * **Data Integrity & Error Handling:** Robust PostgreSQL constraints to prevent duplicate records (like emails) and clean API exception handling to surface meaningful errors to the client.
 
-## 📸 Application Previews
-*(Note: Replace this text with screenshots of your Admin Dashboard, Employee Tables, and Project Assignment UI)*
-
----
-
 ## 🛠️ Local Setup Instructions
 
 This project is structured as a monorepo containing both the frontend and backend applications.
