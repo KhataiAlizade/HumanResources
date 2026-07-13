@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+// Dynamically choose the base URL
+const backendUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8080/api',
+  baseURL: `${backendUrl}/api`,
 });
 
 apiClient.interceptors.request.use(
