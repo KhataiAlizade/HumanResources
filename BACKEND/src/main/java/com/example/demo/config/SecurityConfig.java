@@ -32,11 +32,14 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-       configuration.setAllowedOrigins(Arrays.asList(
-            "http://localhost", 
-            "http://localhost:5173", 
+        
+        // Using Patterns allows any local port and any Vercel preview deployment!
+        configuration.setAllowedOriginPatterns(Arrays.asList(
+            "http://localhost:*", 
+            "https://*.vercel.app",
             "https://human-resources-two.vercel.app"
         ));
+        
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
         configuration.setAllowCredentials(true);
@@ -45,7 +48,6 @@ public class SecurityConfig {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
