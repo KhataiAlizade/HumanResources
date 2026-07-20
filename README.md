@@ -1,3 +1,4 @@
+Live: https://human-resources-pye8.vercel.app/
 # Full-Stack Human Resources Management System (HRMS)
 
 This repository contains a comprehensive, role-based Human Resources Management System designed to streamline employee administration. Building a robust, relationally sound HRMS serves as a complete demonstration of modern full-stack development and database engineering principles. From handling strict PostgreSQL data integrity constraints to implementing secure JWT authentication in a Java Spring Boot backend, this monolithic architecture proves the capability to deliver a production-ready application.
