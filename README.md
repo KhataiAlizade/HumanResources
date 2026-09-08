@@ -1,43 +1,63 @@
-Live: https://human-resources-pye8.vercel.app/
 # Full-Stack Human Resources Management System (HRMS)
 
-This repository contains a comprehensive, role-based Human Resources Management System designed to streamline employee administration. Building a robust, relationally sound HRMS serves as a complete demonstration of modern full-stack development and database engineering principles. From handling strict PostgreSQL data integrity constraints to implementing secure JWT authentication in a Java Spring Boot backend, this monolithic architecture proves the capability to deliver a production-ready application.
+**Live Demo:** https://human-resources-pye8.vercel.app/
+
+A full-stack Human Resources Management System designed to manage employees, projects, leave requests, salaries, and role-based access.
+
+The project demonstrates practical full-stack development using Java/Spring Boot on the backend, React/TypeScript on the frontend, and PostgreSQL for data persistence. It also includes JWT authentication, role-based authorization, and automated backend unit testing.
 
 ## 🚀 Tech Stack
 
-**Backend**
-* Java 17
-* Spring Boot 3
-* Spring Security (JWT Authentication)
-* Spring Data JPA / Hibernate
+### Backend
+- Java 17
+- Spring Boot
+- Spring Security
+- JWT Authentication
+- Spring Data JPA
+- Hibernate
+- REST APIs
+- Maven
 
-**Frontend**
-* React (TypeScript)
-* Vite
-* Tailwind CSS v4
-* Axios
+### Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS v4
+- Axios
 
-**Database**
-* PostgreSQL
+### Database
+- PostgreSQL
+
+### Testing
+- JUnit 5
+- Mockito
+- H2 (test database)
 
 ## ✨ Key Features
 
-* **Role-Based Access Control (RBAC):** Distinct routing, dashboards, and API permissions for Admin and Employee roles, secured by JWTs.
-* **Skill-Based Project Assignment:** Admins can filter employees dynamically by specific technical skills (e.g., Java, React, SQL) to assign the right talent to incoming projects.
-* **Leave Management Workflow:** Employees can submit structured time-off requests, which dynamically route to the Admin command center for approval or rejection.
-* **Payroll & Salary Tracking:** Secure backend calculation, assignment, and history logging for employee compensation.
-* **Data Integrity & Error Handling:** Robust PostgreSQL constraints to prevent duplicate records (like emails) and clean API exception handling to surface meaningful errors to the client.
+- **Role-Based Access Control (RBAC):** Separate permissions, routing, and dashboards for Admin and Employee users secured with JWT authentication.
+- **Employee Management:** Manage employee information, skills, salaries, and related HR data.
+- **Skill-Based Project Assignment:** Admins can filter employees by technical skills such as Java, React, and SQL when assigning projects.
+- **Leave Management:** Employees can submit leave requests while Admins can review, approve, or reject them.
+- **Payroll & Salary Tracking:** Manage employee salaries and maintain salary-related records.
+- **Secure Authentication:** JWT-based authentication with Spring Security.
+- **Data Integrity & Error Handling:** PostgreSQL constraints and backend exception handling help prevent invalid or duplicate data.
 
-## 🛠️ Local Setup Instructions
+## 🧪 Testing
 
-This project is structured as a monorepo containing both the frontend and backend applications.
+The backend contains **50 unit tests** written with JUnit 5 and Mockito.
 
-### Prerequisites
-* Java Development Kit (JDK) 17 or higher
-* Node.js and npm
-* PostgreSQL server running locally
+The tests cover core business logic in:
 
-### 1. Database Configuration
-Create a new PostgreSQL database:
-```sql
-CREATE DATABASE hrms_db;
+- Employee management
+- Project management
+- Administration
+- Authentication
+- JWT functionality
+
+The project also includes a Spring Boot application context-load test using an H2 test database in PostgreSQL compatibility mode.
+
+Run the backend tests with:
+
+```bash
+mvnw.cmd test
