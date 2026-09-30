@@ -1,7 +1,11 @@
-# Full-Stack Human Resources Management System (HRMS)
+Full-Stack Human Resources Management System (HRMS)
 
 **Live Demo:** https://human-resources-pye8.vercel.app/
 
+### 🔐 Test Credentials
+To explore the live application, please use the following test accounts:
+* **Admin Access:** `admin@hrms.com` | Password: `admin123`
+---
 A full-stack Human Resources Management System designed to manage employees, projects, leave requests, salaries, and role-based access.
 
 The project demonstrates practical full-stack development using Java/Spring Boot on the backend, React/TypeScript on the frontend, and PostgreSQL for data persistence. It also includes JWT authentication, role-based authorization, and automated backend unit testing.
