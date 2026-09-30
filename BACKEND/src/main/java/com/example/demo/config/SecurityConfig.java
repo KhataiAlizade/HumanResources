@@ -28,16 +28,15 @@ public class SecurityConfig {
     public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter) {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
-
-    @Bean
+@Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         
-        // Using Patterns allows any local port and any Vercel preview deployment!
         configuration.setAllowedOriginPatterns(Arrays.asList(
             "http://localhost:*", 
             "https://*.vercel.app",
-            "https://human-resources-two.vercel.app"
+            "https://human-resources-two.vercel.app",
+            "https://human-resources-pye8.vercel.app/" 
         ));
         
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
