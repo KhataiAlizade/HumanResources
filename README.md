@@ -2,13 +2,17 @@ Full-Stack Human Resources Management System (HRMS)
 
 **Live Demo:** https://human-resources-pye8.vercel.app/
 
-### 🔐 Test Credentials
-To explore the live application, please use the following test accounts:
-* **Admin Access:** `admin@hrms.com` | Password: `admin123`
----
-A full-stack Human Resources Management System designed to manage employees, projects, leave requests, salaries, and role-based access.
+### Test Credentials
 
-The project demonstrates practical full-stack development using Java/Spring Boot on the backend, React/TypeScript on the frontend, and PostgreSQL for data persistence. It also includes JWT authentication, role-based authorization, and automated backend unit testing.
+The live demo starts with one seeded Admin account. To explore the Employee view, log in as Admin first and create an employee account from the UI — it only takes a few clicks.
+
+**Admin Access:** `admin@hrms.com` | Password: `admin123`
+
+**To see the Employee view:**
+1. Log in as Admin (credentials above)
+2. Go to Employee Management → Add Employee
+3. Create an employee with your own test email/password
+4. Log out and log back in with those credentials to see the Employee dashboard
 
 ## 🚀 Tech Stack
 
